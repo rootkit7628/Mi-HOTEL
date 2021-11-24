@@ -1,0 +1,62 @@
+.main {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 90px 0 90px 0;
+}
+.sub-main {
+     justify-content: center;
+     height: 550px;
+     width:35% ;
+     box-shadow: 11px 12px 13px 12px white;
+    padding-top: 30px;
+    border-radius: 50px;
+    background-color: whitesmoke;
+}
+.profile{
+    height: 100px;
+    width: 100px;
+    border-radius: 130px;
+}
+input{
+    width: 300px;
+    height: 50px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 25px 0px ;
+    border: none;
+    outline: none;
+    background-color: white;
+
+}
+.email {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    padding: 14px 0 0 25px;
+}
+.user {
+    padding-left: 70px;
+    font-size: 20px;
+}
+.password {
+    padding-left: 70px;
+    font-size: 20px;
+}
+.sd-input {
+    padding-top: 20px;
+}
+.btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: #31b572;
+    color: white;
+    font-size: 20px;
+}
+.lien {
+    font-size: 20px;
+    font-weight: 400;
+}
+a{
+    color: blue;
+}

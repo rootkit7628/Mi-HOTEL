@@ -1,0 +1,22 @@
+.lmj-categories {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.lmj-categories-select {
+	margin-right: 40px;
+	font-size: 18px;
+	width: 120px;
+	height: 40px;
+	border-radius: 8px;
+}
+.btn
+{
+	background-color: #31b572;
+	font-size: 18px;
+	margin-right: 10px;
+	width: 120px;
+	height: 40px;
+	border-radius: 8px;
+	border-color: none;
+}
