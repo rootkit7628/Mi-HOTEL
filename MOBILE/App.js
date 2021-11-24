@@ -26,9 +26,10 @@ const App =()=> {
           <Stack.Screen
             name="Home"
             component={Acceuil}
-            />
+          />
           <Stack.Screen
-            name="Authentification" component={Authentification} />
+            name="Authentification" component={Authentification}
+          />
        </Stack.Navigator>
     </NavigationContainer>
   )
