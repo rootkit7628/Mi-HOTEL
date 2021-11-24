@@ -1,0 +1,27 @@
+<data name="mihotelDataService" serviceNamespace="" serviceGroup="" transports="http https">
+  <description />
+  <config id="mihotelBDD">
+    <property name="driverClassName">org.postgresql.Driver</property>
+    <property name="url">jdbc:postgresql://127.0.0.1:5432/mihotel</property>
+    <property name="username">postgres</property>
+    <property name="password">postgres</property>
+  </config>
+  <query id="listUser" useConfig="mihotelBDD">
+    <sql>SELECT id, nom, prenom, droit FROM "users";</sql>
+    <result outputType="json">{
+     users : {
+         "user" : [{
+               "id"  : "$id",
+               "nom" : "$nom",
+               "prenom" : "$prenom",
+               "droit" : "$droit"
+
+          }]
+     }
+}</result>
+  </query>
+  <resource method="GET" path="users">
+    <description />
+    <call-query href="listUser" />
+  </resource>
+</data>

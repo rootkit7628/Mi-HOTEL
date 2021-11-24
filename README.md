@@ -10,5 +10,4 @@ Une application web pour gérer un hôtel
 ### Tech stack :
   - ReactJS pour le Front-END 
   - PostgreSQL pour la base de données  
-  - NodeJS pour le côté Back-END
-  - Service WSO-2 pour la gestion d'API
+  - Service WSO-2 pour la gestion d'API et Micro-Services

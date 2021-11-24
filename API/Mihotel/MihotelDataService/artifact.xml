@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="mihotelDataService" groupId="com.mihotel.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/mihotelDataService.dbs</file>
+    </artifact>
+</artifacts>
