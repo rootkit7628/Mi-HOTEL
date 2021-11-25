@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react'
-import Banner from './Banner'
-import logo from '../assets/logo.png'
-import Cart from './Cart'
-import Footer from './Footer'
-import ShoppingList from './ShoppingList'
-import Login from './login'
-import '../styles/Layout.css'
-import '../styles/login.css'
+import { useState, useEffect } from 'react';
+import Banner from './Banner';
+import logo from '../assets/logo.png';
+import Cart from './Cart';
+import ShoppingList from './ShoppingList';
+import Login from './login';
+import '../styles/Layout.css';
+import '../styles/login.css';
+// import Menu from "./Menu"
 
 function App() {
 	const savedCart = localStorage.getItem('cart')
@@ -17,6 +17,7 @@ function App() {
 
 	return (
 		<div>
+			{/* <Menu></Menu> */}
 			<Login/>
 			<Banner>
 				<img src={logo} alt='logo-la-maison-jungle' className='lmj-logo' />
@@ -27,9 +28,7 @@ function App() {
 				<Cart cart={cart} updateCart={updateCart} />
 				<ShoppingList cart={cart} updateCart={updateCart} />
 			</div>
-			<Footer />
 		</div>
 	)
 }
-
 export default App
