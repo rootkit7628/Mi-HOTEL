@@ -14,7 +14,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Acceuil from './Components/Acceuil'
+import Couverture from './Components/Couverture'
 import Authentification from './Components/Authentification'
 
 const Stack = createNativeStackNavigator()
@@ -22,18 +22,15 @@ const Stack = createNativeStackNavigator()
 const App =()=> {
   return(
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
           <Stack.Screen
-            name="Home"
-            component={Acceuil}
+            name="Home" component={Couverture}
           />
           <Stack.Screen
-            name="Authentification" component={Authentification}
-          />
+name="Authentification" component={Authentification} />
        </Stack.Navigator>
     </NavigationContainer>
   )
 }
-
 
 export default App
