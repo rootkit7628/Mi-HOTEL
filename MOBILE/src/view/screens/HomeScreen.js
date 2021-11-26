@@ -33,10 +33,10 @@ const HomeScreen = ({navigation}) => {
         headerShown:false,
         tabBarIcon:() => {
           let icon
-          if(route.name === 'MI-Hotel'){
+          if(route.name === 'Mi-Hotel'){
             icon = 'utensils'
           }
-          else if(route.name === "Panier"){
+          else if(route.name === "Commandes"){
             icon = 'shopping-cart'
           }
           return (<FontAwesome5 name={icon} color='#000' solid />)
@@ -45,8 +45,6 @@ const HomeScreen = ({navigation}) => {
     }>
       <Tab.Screen name="Mi-Hotel" component={Acceuil} />
       <Tab.Screen name="Commandes" component={Root}/>
-      <Tab.Screen name="Maps" component={Maps} />
-
 
     </Tab.Navigator>
   )
@@ -145,7 +143,7 @@ const Root = ({navigation}) => {
           <View
             style={{
               flexDirection: 'row',
-              justifyContent: 'space-between',
+              justifyContent: 'center',
               marginTop: 5,
             }}>
             <Text style={{fontSize: 19, fontWeight: 'bold'}}>
@@ -160,10 +158,10 @@ const Root = ({navigation}) => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Text
+              <TouchableOpacity
                 style={{fontSize: 22, color: COLORS.white, fontWeight: 'bold'}}>
                 +
-              </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -192,7 +190,7 @@ const Root = ({navigation}) => {
       </View>
       <CategoryList />
       <FlatList
-        columnWrapperStyle={{justifyContent: 'space-between'}}
+        columnWrapperStyle={{justifyContent: 'center'}}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           marginTop: 10,

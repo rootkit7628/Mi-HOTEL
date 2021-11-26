@@ -31,21 +31,21 @@ const OrangeButton = (props: OrangeButtonProps) => {
 
 const styles = StyleSheet.create({
   orangeButtonStyle: {
-    backgroundColor: COLORS.ORANGE,
-    height: hp(5),
-    width: wp(50),
+    backgroundColor: COLORS.green,
+    height: hp(6),
+    width: wp(35),
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: wp(5),
-    shadowColor: COLORS.GREY,
+    borderRadius: wp(2),
+    shadowColor: COLORS.grey,
     shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.3,
     shadowRadius: 5,
     elevation: 5,
   },
   startTextStyle: {
-    color: COLORS.WHITE,
-    fontFamily: 'Montserrat-Regular',
+    color: COLORS.white,
+    fontFamily: 'Arial',
     letterSpacing: wp(0.5),
   },
 });
