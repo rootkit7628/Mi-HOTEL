@@ -50,20 +50,20 @@ const WelcomeScreen = (props: WelcomeScreenProps) => {
           <View
             style={{
               flex: 1,
-              backgroundColor: COLORS.WHITE,
+              backgroundColor: COLORS.white,
               borderTopLeftRadius: wp(20),
             }}>
-            <Text style={styles.loginTextStyle}>LOGIN</Text>
+            <Text style={styles.loginTextStyle}></Text>
             <TextInput
               style={styles.textInputStyle}
               placeholder="EMAIL"
-              placeholderTextColor={COLORS.WHITE}
+              placeholderTextColor={COLORS.white}
               keyboardType="email-address"
             />
             <TextInput
               style={styles.textInputStyle}
               placeholder="PASSWORD"
-              placeholderTextColor={COLORS.WHITE}
+              placeholderTextColor={COLORS.white}
               secureTextEntry
             />
             <OrangeButton
@@ -77,7 +77,7 @@ const WelcomeScreen = (props: WelcomeScreenProps) => {
           </View>
         ) : (
           <OrangeButton
-            text="Start with us"
+            text="Découvrir"
             onPress={() => setStartClicked(true)}
             style={{
               alignSelf: 'center',
@@ -102,33 +102,33 @@ const styles = StyleSheet.create({
   },
   bottomPart: {},
   bookTextStyle: {
-    color: COLORS.WHITE,
+    color: COLORS.grey,
     fontSize: wp(14),
     letterSpacing: wp(4),
-    fontFamily: 'Montserrat-Light',
+    fontFamily: 'Arial',
   },
   loginTextStyle: {
     alignSelf: 'center',
     textAlign: 'center',
     marginVertical: hp(1),
-    color: COLORS.BLACK,
+    color: COLORS.black,
     fontSize: wp(8),
     letterSpacing: wp(0.1),
-    fontFamily: 'Montserrat',
+    fontFamily: 'Arial',
   },
   textInputStyle: {
-    borderRadius: wp(8),
+    borderRadius: wp(1),
     width: wp(70),
     height: hp(6),
     backgroundColor: COLORS.GRADIENT_OPACITY,
     alignSelf: 'center',
     textAlign: 'center',
     marginVertical: hp(2),
-    color: COLORS.WHITE,
+    color: COLORS.white,
     fontSize: wp(4),
     letterSpacing: wp(0.1),
-    fontFamily: 'Montserrat',
-    shadowOffset: {width: 0, height: 6},
+    fontFamily: 'Arial',
+    shadowOffset: {width: 0, height: 0},
     shadowOpacity: 0.8,
     shadowRadius: 5,
     elevation: 5,

@@ -1,23 +1,24 @@
-import React from 'react';
-import {View, SafeAreaView, Image, Text, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, SafeAreaView, Image, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
 
 const DetailsScreen = ({navigation, route}) => {
   const plant = route.params;
+  const [panier, setPanier] = useState(1)
 
   return (
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: COLORS.white,
+        backgroundColor: COLORS.white
       }}>
       <View style={style.header}>
         <Icon name="arrow-back" size={28} onPress={() => navigation.goBack()} />
         <Icon name="shopping-cart" size={28} />
       </View>
       <View style={style.imageContainer}>
-        <Image source={plant.img} style={{resizeMode: 'contain', flex: 1}} />
+        <Image source={plant.img} style={{flex:1, resizeMode: 'contain', aspectRatio: 1}} />
       </View>
       <View style={style.detailsContainer}>
         <View
@@ -72,28 +73,28 @@ const DetailsScreen = ({navigation, route}) => {
                 flexDirection: 'row',
                 alignItems: 'center',
               }}>
-              <View style={style.borderBtn}>
+              <TouchableOpacity style={style.borderBtn} onPress= {() => setPanier(panier-1)}>
                 <Text style={style.borderBtnText}>-</Text>
-              </View>
+              </TouchableOpacity>
               <Text
                 style={{
                   fontSize: 20,
                   marginHorizontal: 10,
                   fontWeight: 'bold',
                 }}>
-                1
+                {panier}
               </Text>
-              <View style={style.borderBtn}>
+              <TouchableOpacity style={style.borderBtn} onPress= {() => setPanier(panier+1)}>
                 <Text style={style.borderBtnText}>+</Text>
-              </View>
+              </TouchableOpacity>
             </View>
 
-            <View style={style.buyBtn}>
+            <TouchableOpacity style={style.buyBtn}>
               <Text
                 style={{color: COLORS.white, fontSize: 18, fontWeight: 'bold'}}>
                 Buy
               </Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -113,6 +114,7 @@ const style = StyleSheet.create({
     marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 5
   },
   detailsContainer: {
     flex: 0.55,

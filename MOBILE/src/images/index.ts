@@ -1,5 +1,5 @@
 export default {
-  india: require('./india.jpg'),
+  india: require('./india.png'),
   dubai: require('./dubai.jpg'),
   bali: require('./bali.jpg'),
   normal: require('./normal.jpg'),
